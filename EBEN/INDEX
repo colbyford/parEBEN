@@ -1,0 +1,17 @@
+BASIS                   An Example Data File for the Gauss Model
+BASISbinomial           An Example Data File for the Binomial Model
+EBEN-package            Empirical Bayesian Elastic Net (EBEN)
+EBelasticNet.Binomial   The EB Elastic Net Algorithm for Binomial Model
+                        with Normal-Gamma(NG) Prior Distribution
+EBelasticNet.BinomialCV
+                        Cross Validation (CV) Function to Determine
+                        Hyperparameter of the EB_Elastic Net Algorithm
+                        for Binomial Model with Normal-Gamma (NG) Prior
+                        Distribution
+EBelasticNet.Gaussian   The EB Elastic Net Algorithm for Gaussian Model
+EBelasticNet.GaussianCV
+                        Cross Validation (CV) Function to Determine
+                        Hyperparameters of the EBEN Algorithm for
+                        Gaussian Model
+y                       Sample Response Data for Gaussian Model
+yBinomial               Sample Variable Data for Binomial Model

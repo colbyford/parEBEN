@@ -1,0 +1,3 @@
+useDynLib(EBEN)
+exportPattern("^[^\\.]")
+importFrom("stats", "pt", "sd")
