@@ -13,5 +13,3 @@ Depends: R (>= 2.10)
 NeedsCompilation: yes
 Repository: CRAN
 Date/Publication: 2015-10-07 09:13:08
-Built: R 3.3.0; x86_64-apple-darwin13.4.0; 2016-05-04 18:47:34 UTC; unix
-Archs: EBEN.so.dSYM
