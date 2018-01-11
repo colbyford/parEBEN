@@ -7,7 +7,7 @@ function(BASIS,Target,lambda,alpha,Epis = "no",verbose = 0 ){
 		N_effect 		= (K+1)*K/2;
 #-----------------------------------------
 		blupCol 		=5;
-		Beta 			= rep(0,N_effect *blupCol);
+		Beta 			= rep(0,N_effect*blupCol);
 #-----------------------------------------	
 
 
@@ -32,7 +32,7 @@ function(BASIS,Target,lambda,alpha,Epis = "no",verbose = 0 ){
 	}else {
 		N_effect 		= K;
 		blupCol =4;
-		Beta 			= rep(0,N_effect *blupCol);
+		Beta 			= rep(0,N_effect*blupCol);
 
 #		dyn.load("fEBLinearNeMainEff.so")
 
