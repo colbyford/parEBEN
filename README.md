@@ -8,12 +8,14 @@ To combat this complexity issue, the parallelization of the cross-validation fun
 
 ## To Do List
 - [x] Binomial prior cross-validation script with doParallel.
-- [ ] Gaussian prior cross-validation script with doParallel.
+- [x] Gaussian prior cross-validation script with doParallel.
 - [ ] Binomial prior cross-validation script with SparkR.
 - [ ] Gaussian prior cross-validation script with SparkR.
 - [ ] Binomial prior cross-validation script with Microsoft ML Server (RevoScaleR).
 - [ ] Gaussian prior cross-validation script with Microsoft ML Server (RevoScaleR).
+- [ ] Binomial prior cross-validation script with CUDA.
+- [ ] Gaussian prior cross-validation script with CUDA.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
