@@ -4,14 +4,13 @@ library(EBEN)
 data(BASISbinomial)
 data(yBinomial)
 #reduce sample size to speed up the running time
-n <- 10;
-k <- 100;
+n <- 50;
+k <- 200;
 N <- length(yBinomial);
 set.seed(1)
 set  <- sample(N,n);
 BASIS <- BASISbinomial[set,1:k];
 y <- yBinomial[set];
-
 nFolds <- 3
 
 output <- EBelasticNet.Binomial(BASIS, y,lambda = serCV$Lambda_optimal,alpha = serCV$Alpha_optimal, Epis = "no",verbose = 5)
