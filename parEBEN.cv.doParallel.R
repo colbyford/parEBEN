@@ -78,7 +78,7 @@ parEBEN.cv.doParallel <- function (BASIS, Target, nFolds, Epis = "no", foldId = 
     logL <- mat.or.vec(nFolds, 1)
     SSE1Alpha <- matrix(1e+10, N_step, 2)
 
-    cvoutput <- foreach(i_alpha = 1:nAlpha, .combine= "rbind") %dopar% {
+    cvoutput <- foreach(i_alpha = 1:nAlpha, .combine= "rbind", .packages = c("foreach")) %dopar% {
       alpha <- Alpha[i_alpha]
       SSE1Alpha <- matrix(1e+10, N_step, 2)
       cat("Testing alpha", i_alpha, "/", nAlpha, ":\t\talpha: ", alpha, "\n")
@@ -225,7 +225,7 @@ parEBEN.cv.doParallel <- function (BASIS, Target, nFolds, Epis = "no", foldId = 
     MeanSqErr <- mat.or.vec(nFolds,1)
     SSE1Alpha	<- matrix(1e10,N_step,2)# temp matrix to keep MSE + std in each step
     
-    cvoutput <- foreach (i_alpha = 1:nAlpha, .combine = rbind) %dopar% {
+    cvoutput <- foreach (i_alpha = 1:nAlpha, .combine = rbind, .packages = c("foreach")) %dopar% {
       alpha <- Alpha[i_alpha]
       SSE1Alpha <- matrix(1e10,N_step,2)# temp matrix to keep MSE + std in each step
       cat("Testing alpha", i_alpha, "/",nAlpha,":\t\talpha: ",alpha,"\n")
@@ -268,7 +268,7 @@ parEBEN.cv.doParallel <- function (BASIS, Target, nFolds, Epis = "no", foldId = 
               basisTest <- rep(0,length(Target.Test))
             }					
           }
-          #compute mean square error:
+          #Compute Mean Square Error:
           temp <- Target.Test - (Mu0 + basisTest%*%Mu)			
           MeanSqErr[i] <- t(temp)%*%temp
           return(MeanSqErr[i])
