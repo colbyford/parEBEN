@@ -30,7 +30,7 @@ library(parEBEN)
 - [ ] Gaussian prior cross-validation script with SparkR.
 - [ ] Binomial prior cross-validation script with CUDA.
 - [ ] Gaussian prior cross-validation script with CUDA.
-- [ ] Manual Files/Instructions for use.
+- [x] Manual File/Usage Instructions.
 
 ## License
 
