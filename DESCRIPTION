@@ -5,15 +5,15 @@ Version: 0.9.0
 Date: 2018-01-16
 Author: Colby Ford
 Maintainer: Colby Ford <cford38@uncc.edu>
-Description: Provides parallelized cross-validation functionality for the Empirical Bayesian Elastic Net (EBEN) package for handling multicollinearity in generalized linear regression models.
+Description: Provides parallelized cross-validation functionality to the Empirical Bayesian Elastic Net (EBEN) package for handling multicollinearity in generalized linear regression models.
 URL: https://github.com/colbyford/parEBEN (site)
 License: Apache License 2.0
 Depends:
 	R (>= 3.0.0)
 Imports:
 	EBEN (>= 4.6.0),
-	doParallel (>=1.0.0),
-	foreach (>=1.4.3)
+	doParallel (>= 1.0.0),
+	foreach (>= 1.4.3)
 Suggests:
 	RevoScaleR
 Collate: 
