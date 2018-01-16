@@ -1,4 +1,4 @@
-# parEBEN - A parallel implementation of the Empirical Bayesian Elastic Net in R
+# parEBEN - A parallel implementation of the Empirical Bayesian Elastic Net Cross-Validation in R
 [![Build Status](https://travis-ci.org/colbyford/parEBEN.svg?branch=master)](https://travis-ci.org/colbyford/parEBEN)
 
 <img align="right" src="https://raw.githubusercontent.com/colbyford/parEBEN/master/img/parEBEN_icon.png" alt="parEBEN icon" width="200">
