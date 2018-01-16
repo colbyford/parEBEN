@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 # parEBEN - A parallel implementation of the Empirical Bayesian Elastic Net in R
 [![Build Status](https://travis-ci.org/colbyford/parEBEN.svg?branch=master)](https://travis-ci.org/colbyford/parEBEN)
-=======
-# parEBEN - A parallel implementation of the Empirical Bayesian Elastic Net in R 
----
-<img align="right" src="https://raw.githubusercontent.com/colbyford/parEBEN/master/img/parEBEN_icon.png" alt="parEBEN icon" width="200">
 
->>>>>>> 02b772b99ce8e5fe3d5d405556dca76bfd6e8ac1
+<img align="right" src="https://raw.githubusercontent.com/colbyford/parEBEN/master/img/parEBEN_icon.png" alt="parEBEN icon" width="200">
 
 ## Abstract
 
@@ -35,6 +30,7 @@ library(parEBEN)
 - [ ] Gaussian prior cross-validation script with SparkR.
 - [ ] Binomial prior cross-validation script with CUDA.
 - [ ] Gaussian prior cross-validation script with CUDA.
+- [ ] Manual Files/Instructions for use.
 
 ## License
 
