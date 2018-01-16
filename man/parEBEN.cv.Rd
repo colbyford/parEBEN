@@ -1,7 +1,7 @@
 \name{parEBEN.cv}
 \alias{parEBEN.cv}
 
-\title{Parallelized Cross-Validation Function to Determine Hyperparameter of the Empirical Bayesian Elastic Net Algorithm.}
+\title{Parallel Implementations of the Empirical Bayesian Elastic Net Cross-Validation}
 
 \description{This function serves as the front end for the internal parallelized cross-validation functions of the parEBEN package. parEBEN.cv allows for the user to define the parallel environment, the prior, and all other parameters from a single function call.
 
