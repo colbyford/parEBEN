@@ -1,5 +1,5 @@
 # *parEBEN* - Parallel Implementations of the Empirical Bayesian Elastic Net Cross-Validation in R
-[![Build Status](https://travis-ci.org/colbyford/parEBEN.svg?branch=master)](https://travis-ci.org/colbyford/parEBEN)
+<h3 align = "right">Colby Ford</h3>
 
 <img align="right" src="https://raw.githubusercontent.com/colbyford/parEBEN/master/img/parEBEN_icon.png" alt="parEBEN icon" width="200">
 
