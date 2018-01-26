@@ -11,6 +11,10 @@ The Empirical Bayesian Elastic Net (EBEN) algorithm was developed by [Huang et a
 
 To combat this complexity issue, the parallelization of the cross-validation functions was performed by employing parallel packages in R. By parallelizing the iterations of the cross-validation over multiple CPU cores or multiple machines of a computing clusters, a drastic time reduction can seen with no negative effect on the resulting EBEN models. By reducing the computation time, regression models on larger, more complex data can be completed without such a delay. This also opens the door for larger datasets to be analyzed as opposed to limiting the research due to time and computing resource constraints. Thus, parallelizing the cross-validation of the EBEN models will prove to be greatly beneficial in future research using cross-validated Bayesian elastic nets.
 
+## Time Reduction Benchmark
+
+<img align="center" src="https://raw.githubusercontent.com/colbyford/parEBEN/master/img/binomialcvtimetest.png" alt="Binomial CV Time Reduction">
+
 ## Installation
 
 You can install the latest stable version from CRAN using the following command:
