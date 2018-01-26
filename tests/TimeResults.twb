@@ -14,7 +14,7 @@
             <connection class='textscan' directory='C:/Users/Colby Ford/Desktop/parEBEN/tests' filename='testoutput_1-24-2017_1.csv' password='' server='' />
           </named-connection>
         </named-connections>
-        <relation connection='textscan.1rcsu6f1c4e1tg0zr96ir1ltn9dg' name='testoutput_1-26-2017_1.csv' table='[testoutput_1-26-2017_1#csv]' type='table'>
+        <relation connection='textscan.1rcsu6f1c4e1tg0zr96ir1ltn9dg' name='testoutput_1-26-2017_1_binomial.csv' table='[testoutput_1-26-2017_1_binomial#csv]' type='table'>
           <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
             <column datatype='integer' name='F1' ordinal='0' />
             <column datatype='integer' name='n' ordinal='1' />
@@ -33,7 +33,7 @@
             <remote-name>F1</remote-name>
             <remote-type>20</remote-type>
             <local-name>[F1]</local-name>
-            <parent-name>[testoutput_1-26-2017_1.csv]</parent-name>
+            <parent-name>[testoutput_1-26-2017_1_binomial.csv]</parent-name>
             <remote-alias>F1</remote-alias>
             <ordinal>0</ordinal>
             <local-type>integer</local-type>
@@ -48,7 +48,7 @@
             <remote-name>n</remote-name>
             <remote-type>20</remote-type>
             <local-name>[n]</local-name>
-            <parent-name>[testoutput_1-26-2017_1.csv]</parent-name>
+            <parent-name>[testoutput_1-26-2017_1_binomial.csv]</parent-name>
             <remote-alias>n</remote-alias>
             <ordinal>1</ordinal>
             <local-type>integer</local-type>
@@ -63,7 +63,7 @@
             <remote-name>k</remote-name>
             <remote-type>20</remote-type>
             <local-name>[k]</local-name>
-            <parent-name>[testoutput_1-26-2017_1.csv]</parent-name>
+            <parent-name>[testoutput_1-26-2017_1_binomial.csv]</parent-name>
             <remote-alias>k</remote-alias>
             <ordinal>2</ordinal>
             <local-type>integer</local-type>
@@ -78,7 +78,7 @@
             <remote-name>nFolds</remote-name>
             <remote-type>20</remote-type>
             <local-name>[nFolds]</local-name>
-            <parent-name>[testoutput_1-26-2017_1.csv]</parent-name>
+            <parent-name>[testoutput_1-26-2017_1_binomial.csv]</parent-name>
             <remote-alias>nFolds</remote-alias>
             <ordinal>3</ordinal>
             <local-type>integer</local-type>
@@ -93,7 +93,7 @@
             <remote-name>ser_user_time</remote-name>
             <remote-type>5</remote-type>
             <local-name>[ser_user_time]</local-name>
-            <parent-name>[testoutput_1-26-2017_1.csv]</parent-name>
+            <parent-name>[testoutput_1-26-2017_1_binomial.csv]</parent-name>
             <remote-alias>ser_user_time</remote-alias>
             <ordinal>4</ordinal>
             <local-type>real</local-type>
@@ -108,7 +108,7 @@
             <remote-name>ser_system_time</remote-name>
             <remote-type>5</remote-type>
             <local-name>[ser_system_time]</local-name>
-            <parent-name>[testoutput_1-26-2017_1.csv]</parent-name>
+            <parent-name>[testoutput_1-26-2017_1_binomial.csv]</parent-name>
             <remote-alias>ser_system_time</remote-alias>
             <ordinal>5</ordinal>
             <local-type>real</local-type>
@@ -123,7 +123,7 @@
             <remote-name>ser_elapsed_time</remote-name>
             <remote-type>5</remote-type>
             <local-name>[ser_elapsed_time]</local-name>
-            <parent-name>[testoutput_1-26-2017_1.csv]</parent-name>
+            <parent-name>[testoutput_1-26-2017_1_binomial.csv]</parent-name>
             <remote-alias>ser_elapsed_time</remote-alias>
             <ordinal>6</ordinal>
             <local-type>real</local-type>
@@ -138,7 +138,7 @@
             <remote-name>par_user_time</remote-name>
             <remote-type>5</remote-type>
             <local-name>[par_user_time]</local-name>
-            <parent-name>[testoutput_1-26-2017_1.csv]</parent-name>
+            <parent-name>[testoutput_1-26-2017_1_binomial.csv]</parent-name>
             <remote-alias>par_user_time</remote-alias>
             <ordinal>7</ordinal>
             <local-type>real</local-type>
@@ -153,7 +153,7 @@
             <remote-name>par_system_time</remote-name>
             <remote-type>5</remote-type>
             <local-name>[par_system_time]</local-name>
-            <parent-name>[testoutput_1-26-2017_1.csv]</parent-name>
+            <parent-name>[testoutput_1-26-2017_1_binomial.csv]</parent-name>
             <remote-alias>par_system_time</remote-alias>
             <ordinal>8</ordinal>
             <local-type>real</local-type>
@@ -168,7 +168,7 @@
             <remote-name>par_elapsed_time</remote-name>
             <remote-type>5</remote-type>
             <local-name>[par_elapsed_time]</local-name>
-            <parent-name>[testoutput_1-26-2017_1.csv]</parent-name>
+            <parent-name>[testoutput_1-26-2017_1_binomial.csv]</parent-name>
             <remote-alias>par_elapsed_time</remote-alias>
             <ordinal>9</ordinal>
             <local-type>real</local-type>
@@ -182,7 +182,7 @@
           <metadata-record class='capability'>
             <remote-name />
             <remote-type>0</remote-type>
-            <parent-name>[testoutput_1-26-2017_1.csv]</parent-name>
+            <parent-name>[testoutput_1-26-2017_1_binomial.csv]</parent-name>
             <remote-alias />
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
@@ -225,7 +225,7 @@
       <column-instance column='[par_user_time]' derivation='Sum' name='[sum:par_user_time:qk]' pivot='key' type='quantitative' />
       <column-instance column='[ser_elapsed_time]' derivation='Sum' name='[sum:ser_elapsed_time:qk]' pivot='key' type='quantitative' />
       <column-instance column='[ser_user_time]' derivation='Sum' name='[sum:ser_user_time:qk]' pivot='key' type='quantitative' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.434509' measure-ordering='alphabetic' measure-percentage='0.565491' show-structure='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.433249' measure-ordering='alphabetic' measure-percentage='0.566751' show-structure='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='color' field='[:Measure Names]' type='palette'>
@@ -262,7 +262,7 @@
     </datasource>
   </datasources>
   <worksheets>
-    <worksheet name='Elapsed Time'>
+    <worksheet name='Binomial CV Elapsed Time'>
       <layout-options>
         <title>
           <formatted-text>
@@ -346,8 +346,54 @@
       </table>
     </worksheet>
   </worksheets>
+  <dashboards>
+    <dashboard name='Binomial Cross-Validation'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones use-insets='false'>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98230' id='8' param='vert' type='layout-flow' w='99064' x='468' y='885'>
+            <zone h='4646' id='7' type='title' w='99064' x='468' y='885'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='93584' id='5' param='horz' type='layout-flow' w='99064' x='468' y='5531'>
+              <zone h='93584' id='3' type='layout-basic' w='99064' x='468' y='5531'>
+                <zone h='93584' id='1' name='Binomial CV Elapsed Time' w='99064' x='468' y='5531'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='9735' id='6' leg-item-layout='vert' name='Binomial CV Elapsed Time' pane-specification-id='1' param='[federated.0zdho760r10gip0zj32nj038hu57].[:Measure Names]' type='color' w='11059' x='86776' y='1217'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='4' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
   <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='Elapsed Time'>
+    <window class='worksheet' name='Binomial CV Elapsed Time'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -385,9 +431,22 @@
         </highlight>
       </viewpoint>
     </window>
+    <window class='dashboard' maximized='true' name='Binomial Cross-Validation'>
+      <viewpoints>
+        <viewpoint name='Binomial CV Elapsed Time'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.0zdho760r10gip0zj32nj038hu57].[:Measure Names]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='7' />
+    </window>
   </windows>
   <thumbnails>
-    <thumbnail height='192' name='Elapsed Time' width='192'>
+    <thumbnail height='192' name='Binomial CV Elapsed Time' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
       AAAgAElEQVR4nO29eZAk133f+cmz7qquo6vPme7puQHMDAb3QRKEQBKkRHuDEiVKlK0Nh2Jj
       LSsckrWWr/Xa2rVjYyPWEQ5H7MZGrGzTK1mUKJGiaZG0CJIACBAkiGuAGWAwmKOn7+7qrqPr
@@ -603,6 +662,153 @@
       Qh7DchkdHtyYJYWHrMXJZVLv6o8qCSLpHLl0kkgk0gktZRktEqOQz6FqOlFNAVklEo0S1SQU
       PU4i1jmXpkfIJKN4QiG9dpORqumMjoygKnJv7wJtJ+GFo95mt/zp6RAoJGSn+f8Bs5bEdBbh
       MfkAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Binomial Cross-Validation' width='192'>
+      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
     </thumbnail>
   </thumbnails>
 </workbook>
