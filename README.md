@@ -17,7 +17,7 @@ To combat this complexity issue, the parallelization of the cross-validation fun
 
 ## Installation
 
-You can install the latest stable version from CRAN using the following command:
+You can install the latest stable version from GitHub using the following command:
 ```r
 library(devtools)
 install_github("colbyford/parEBEN")
