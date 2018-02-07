@@ -301,6 +301,6 @@ parEBEN.cv.doParallel <- function (BASIS, Target, nFolds, Epis = "no", foldId = 
     return(result)
   }
   else{
-    cat("Currently, only the binomial and gaussian prior distributions are allowed.")
+    cat("Currently, only the `binomial` and `gaussian` prior distributions are allowed.")
   }
 }

@@ -1,7 +1,5 @@
 library(EBEN)
 library(parEBEN)
-data(BASISbinomial)
-data(yBinomial)
 
 ## Register your local cluster.
 library(doParallel)  
@@ -22,18 +20,20 @@ registerDoParallel(cl)
 #                     par_elapsed_time = c(0,0,0,0)
 #                     )
 
-tests <- read.csv("testmatrix.csv")
+tests <- read.csv("testmatrix_2-7-2018_1_gaussian.csv")
 
 ## Loop throught the tests in the matrix and report the time
 for (i in 1:nrow(tests)){
+  data(BASIS)
+  data(y)
   n <- tests[i,1]
   k <- tests[i,2]
   nFolds <- tests[i,3]
-  N <- length(yBinomial)
+  #N <- length(y)
   set.seed(1)
-  set <- sample(N,n)
-  BASIS <- BASISbinomial[set,1:k]
-  y  <- yBinomial[set]
+  #set <- sample(N,n)
+  BASISset <- BASIS[1:n,1:k]
+  yset  <- y[1:n]
   sertime <- system.time(EBelasticNet.GaussianCV(BASIS,y, nFolds, Epis = "no"))
   tests[i,4] <- sertime[1]
   tests[i,5] <- sertime[2]
@@ -44,7 +44,7 @@ for (i in 1:nrow(tests)){
   tests[i,9] <- partime[3]
 }
 
-write.csv(tests,"testoutput_1-26-2017_1_gaussian.csv")
+write.csv(tests,"testoutput_2-7-2018_1_gaussian.csv")
 
 ## Visualize the Results
 ## Line Graphs
