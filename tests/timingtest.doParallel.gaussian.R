@@ -34,6 +34,7 @@ for (i in 1:nrow(tests)){
   #set <- sample(N,n)
   BASISset <- BASIS[1:n,1:k]
   yset  <- y[1:n]
+  cat("Iteration:",i ," (n:", n,"k:", k,"nFolds:", nFolds,")\n")
   sertime <- system.time(EBelasticNet.GaussianCV(BASIS,y, nFolds, Epis = "no"))
   tests[i,4] <- sertime[1]
   tests[i,5] <- sertime[2]

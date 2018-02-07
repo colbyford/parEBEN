@@ -34,6 +34,7 @@ for (i in 1:nrow(tests)){
   set <- sample(N,n)
   BASIS <- BASISbinomial[set,1:k]
   y  <- yBinomial[set]
+  cat("Iteration:",i ," (n:", n,"k:", k,"nFolds:", nFolds,")\n")
   sertime <- system.time(EBelasticNet.BinomialCV(BASIS,y, nFolds, Epis = "no"))
   tests[i,4] <- sertime[1]
   tests[i,5] <- sertime[2]
