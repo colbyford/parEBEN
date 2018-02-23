@@ -13,7 +13,7 @@ To combat this complexity issue, the parallelization of the cross-validation fun
 
 ## Time Reduction Benchmark
 
-<img align="center" src="https://raw.githubusercontent.com/colbyford/parEBEN/master/img/binomialcvtimetest.png" alt="Binomial CV Time Reduction">
+To interactively view cross-validation time benchmarks between parEBEN and the original EBEN package, click [here](https://public.tableau.com/profile/cford38#!/vizhome/parEBEN-Benchmarks/BinomialCross-Validation)
 
 ## Installation
 
