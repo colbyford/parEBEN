@@ -28,6 +28,8 @@ library(parEBEN)
 
 - [x] Binomial prior cross-validation script with doParallel.
 - [x] Gaussian prior cross-validation script with doParallel.
+- [x] Binomial prior cross-validation script with doMPI.
+- [x] Gaussian prior cross-validation script with doMPI.
 - [ ] Binomial prior cross-validation script with Microsoft ML Server (RevoScaleR).
 - [ ] Gaussian prior cross-validation script with Microsoft ML Server (RevoScaleR).
 - [ ] Binomial prior cross-validation script with SparkR.
