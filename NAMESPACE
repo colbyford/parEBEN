@@ -1,4 +1,5 @@
 import(EBEN)
 import(doParallel)
+import(doMPI)
 import(foreach)
 exportPattern("^[^\\.]")

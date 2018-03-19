@@ -17,8 +17,8 @@ parEBEN.cv(BASIS, Target, nFolds, Epis = "no", foldId = 0, parMethod = "doParall
   \item{nFolds}{Number of n-fold cv}
   \item{Epis}{Epistasis - "yes" or "no" for including two-way interactions}
   \item{foldId}{Randomly assign samples to different folds}
-  \item{parMethod}{Currently, only "doParallel" is supported}
-  \item{prior}{Model prior - "binomial" of "gaussian"}
+  \item{parMethod}{Currently options: "doParallel" and "doMPI"}
+  \item{prior}{Model prior - "binomial" or "gaussian"}
 }
 
 \details{
@@ -37,8 +37,8 @@ parEBEN.cv(BASIS, Target, nFolds, Epis = "no", foldId = 0, parMethod = "doParall
 \author{Colby Ford; Dept. of Bioinformatics and Genomics, The University of North Carolina at Charlotte}
 
 \examples{
-## To use doParallel funtionality on a multicore environment, you must register your local cluster.
-library(doParallel)  
+## To use doParallel or doMPI funtionality on a multicore/multi-machine environment, you must register your local cluster.
+library(doParallel)  #or library(doMPI)
 no_cores <- detectCores() - 1
 cl <- makeCluster(no_cores)
 #clusterExport(cl, c("parEBEN.cv.doParallel"))
@@ -59,7 +59,7 @@ set <- sample(N,n)
 BASIS <- BASISbinomial[set,1:k]
 y <- yBinomial[set]
 
-cv <- parEBEN.cv(BASIS, y, nFolds = 3,Epis = "no", parMethod = "doParallel", prior = "binomial")
+cv <- parEBEN.cv(BASIS, y, nFolds = 3, Epis = "no", parMethod = "doParallel", prior = "binomial")
 
 #Use the optimal values in the EBEN model
 EBENoutput <- EBelasticNet.Binomial(BASIS, y, lambda = cv$Lambda_Optimal, alpha = cv$Alpha_Optimal, Epis = "no",verbose = 5)
