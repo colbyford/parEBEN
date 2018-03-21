@@ -27,7 +27,7 @@ GetLambdaMax <- function (BASIS, Target, Epis = "no"){
 return(as.vector(lambda_Max))  
 }
 
-BuildGrid <- function(BASIS, Target, Epis = "no"){
+BuildGrid <- function(BASIS, Target, nFolds, Epis = "no"){
   lambda_Max <- GetLambdaMax(BASIS, Target, Epis)
   lambda_Max <- lambda_Max * 10
   lambda_Min <- log(0.001 * lambda_Max)
@@ -42,7 +42,7 @@ BuildGrid <- function(BASIS, Target, Epis = "no"){
   nAlpha <- length(Alpha);
   
   #grid <- merge(Alpha,Lambda,all=TRUE)
-  grid <- expand.grid(alpha = Alpha, lambda = Lambda)
+  grid <- as.data.frame(expand.grid(alpha = Alpha, lambda = Lambda))
   
   return(grid)
 }

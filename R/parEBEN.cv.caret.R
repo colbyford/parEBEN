@@ -11,10 +11,11 @@ EBENfit_Gaussian <- function(x, y, param, wts, lev, last, weights, classProbs, .
   out
 }
 
-EBENpredict_Gaussian <- function(modelFit, newData, submodels = NULL){
-  #predict(modelFit, x)
-  #print(modelFit)
-  #EBelasticNet.Gaussian(x, y, modelFit$hyperparameters[1], modelFit$hyperparameters[2])
+EBENpredict_Gaussian <- function(modelFit, x, y, submodels = NULL){
+  x <- as.matrix(x)
+  y <- y
+  out <- EBelasticNet.Gaussian(x, y, modelFit$hyperparameters[1], modelFit$hyperparameters[2])
+  out
 }
 
 EBENmodel_Gaussian  <- list(label = "Gaussian EBEN Model",

@@ -14,7 +14,9 @@ Imports:
 	EBEN (>= 4.6.0),
 	doParallel (>= 1.0.0),
 	doMPI (>= 0.2.0),
-	foreach (>= 1.4.3)
+	foreach (>= 1.4.3),
+	magrittr (>= 1.0.0),
+	dplyr (>= 0.4.0)
 Suggests:
 	RevoScaleR
 Collate:
