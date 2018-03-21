@@ -22,7 +22,7 @@ parEBEN.Binomial <-  function(BASIS, Target, lambda, alpha, Epis = "no",verbose 
                  K = as.integer(K),
                  verbose = as.integer(verbose),
                  bMax = as.integer(N_effect),
-                 PACKAGE = "parEBEN")
+                 PACKAGE = "EBEN")
       #dyn.unload("fEBBinaryNeFull.dll")
     } else {
       N_effect <- K
@@ -43,7 +43,7 @@ parEBEN.Binomial <-  function(BASIS, Target, lambda, alpha, Epis = "no",verbose 
                  K = as.integer(K),
                  verbose = as.integer(verbose),
                  bMax = as.integer(N_effect),
-                 PACKAGE = "parEBEN")
+                 PACKAGE = "EBEN")
       #dyn.unload("fEBBinaryNEmainEff.dll")
       #dyn.unload("ElasticNetBinaryNEmainEff.dll")
     }

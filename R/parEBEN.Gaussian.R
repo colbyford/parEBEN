@@ -24,7 +24,7 @@ parEBEN.Gaussian <-  function(BASIS,Target,lambda,alpha,Epis = "no",verbose = 0 
                  K 		= as.integer(K),
                  verbose = as.integer(verbose),
                  residual = as.double(0),
-                 PACKAGE="parEBEN")
+                 PACKAGE="EBEN")
       
       #dyn.unload("elasticNetLinearNeFull2.dll")	
       
@@ -47,7 +47,7 @@ parEBEN.Gaussian <-  function(BASIS,Target,lambda,alpha,Epis = "no",verbose = 0 
                  K 		= as.integer(K),
                  verbose = as.integer(verbose),
                  residual = as.double(0),
-                 PACKAGE="parEBEN")
+                 PACKAGE="EBEN")
       #dyn.unload("fEBLinearNeMainEff.so")
       
     }		
