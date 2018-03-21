@@ -1,23 +1,22 @@
-\name{parEBEN.cv}
-\alias{parEBEN.cv}
+\name{CrossValidate}
+\alias{CrossValidate}
 
 \title{Parallel Implementations of the Empirical Bayesian Elastic Net Cross-Validation}
 
-\description{This function serves as the front end for the internal parallelized cross-validation functions of the parEBEN package. parEBEN.cv allows for the user to define the parallel environment, the prior, and all other parameters from a single function call.
+\description{This function serves as the front end for the internal parallelized cross-validation functions of the parEBEN package. `CrossValidate` allows for the user to define the input data, number of cross-validation folds, the prior, and all other parameters from a single function call.
 
 In the EBEN algorithm, the hyperparameters control the degree of shrinkage, and are obtained via cross-validation. This program calculates the optimal alpha and lambda values, which minimize the mean square error of the prediction.}
 
 \usage{
-parEBEN.cv(BASIS, Target, nFolds, Epis = "no", foldId = 0, parMethod = "doParallel", prior = "binomial")
+parEBEN.cv(BASIS, Target, nFolds, Epis = "no", foldId = 0, parMethod = "doParallel", prior = "gaussian")
 }
 
 \arguments{
-  \item{BASIS}{Sample matrix; rows correspond to samples, columns correspond to features}
-  \item{Target}{Class label of each individual, TAKES VALUES OF 0 OR 1}
+  \item{BASIS}{Sample matrix; rows correspond to samples, columns correspond to features. Can be a matrix or data frame.}
+  \item{Target}{Dependent variable of each individual. Usually a vector}
   \item{nFolds}{Number of n-fold cv}
   \item{Epis}{Epistasis - "yes" or "no" for including two-way interactions}
   \item{foldId}{Randomly assign samples to different folds}
-  \item{parMethod}{Currently options: "doParallel" and "doMPI"}
   \item{prior}{Model prior - "binomial" or "gaussian"}
 }
 
@@ -26,10 +25,10 @@ parEBEN.cv(BASIS, Target, nFolds, Epis = "no", foldId = 0, parMethod = "doParall
 }
 
 \value{
-  \item{CrossValidation}{Dataframe of CV results: alpha, lambda, MSE, and StdErr values}
-  \item{Optimal_Stats}{The optimal set of hyperparameters with minimum MSE}
-  \item{Lambda_optimal}{The optimal lambda hyperparameter value as computed}
-  \item{Alpha_optimal}{The optimal alpha hyperparameter value as computed}
+  \item{Results.Detail}{Dataframe of CV results: foldId, alpha, lambda, and MSE.}
+  \item{Results.Fold}{Summary of CV by alpha and lambda. Reports SSE.}
+  \item{lambda.optimal}{The optimal lambda hyperparameter value as computed.}
+  \item{alpha.optimal}{The optimal alpha hyperparameter value as computed.}
 }
 
 \references{Huang, A., Xu, S., and Cai, X. (2014). Empirical Bayesian elastic net for multiple quantitative trait locus mapping. Heredity 10.1038/hdy.2014.79}
@@ -41,27 +40,24 @@ parEBEN.cv(BASIS, Target, nFolds, Epis = "no", foldId = 0, parMethod = "doParall
 library(doParallel)  #or library(doMPI)
 no_cores <- detectCores() - 1
 cl <- makeCluster(no_cores)
-#clusterExport(cl, c("parEBEN.cv.doParallel"))
+#clusterExport(cl, c("CrossValidate"))
 registerDoParallel(cl)
 
 ## Load in data and required EBEN and parEBEN packages
 library(EBEN)
 library(parEBEN)
-data(BASISbinomial)
-data(yBinomial)
 
 ## Create small sample matrix for testing
-n <- 50
-k <- 100
-N <- length(yBinomial)
-set.seed(1)
-set <- sample(N,n)
-BASIS <- BASISbinomial[set,1:k]
-y <- yBinomial[set]
+data(BASIS)
+data(y)
+n = 50
+k = 100
+BASIS = BASIS[1:n,1:k]
+y  = y[1:n]
 
-cv <- parEBEN.cv(BASIS, y, nFolds = 3, Epis = "no", parMethod = "doParallel", prior = "binomial")
+parEBENcv <- CrossValidate(BASIS, y, nFolds = 3, BASIS, Epis = "no", prior = "gaussian")
 
 #Use the optimal values in the EBEN model
-EBENoutput <- EBelasticNet.Binomial(BASIS, y, lambda = cv$Lambda_Optimal, alpha = cv$Alpha_Optimal, Epis = "no",verbose = 5)
+EBENoutput <- EBelasticNet.Gaussian(BASIS, y, lambda = parEBENcv$lambda.optimal, alpha = cv$alpha.optimal, Epis = "no", verbose = 1)
 }
 
