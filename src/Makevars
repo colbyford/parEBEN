@@ -1,0 +1,7 @@
+PKG_LIBS=$(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)
+# Uncomment the next line if compiling with a full version of BLAS/LAPACK.
+#PKG_CFLAGS=-DFULL_BLLP -Wall
+# Some other possibly useful options.
+#PKG_CFLAGS=-ansi -pedantic -DFULL_BLLP -Wall
+#PKG_LIBS=-DFULL_BLLP -L/usr/lib/atlas/sse2 -llapack -lblas
+#PKG_LIBS=-DFULL_BLLP -L/usr/lib/atlas -llapack -lf77blas -lcblas -latlas -lf2c
