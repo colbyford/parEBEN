@@ -1,4 +1,4 @@
-parEBEN.Gaussian <-  function(BASIS,Target,lambda,alpha,Epis = "no",verbose = 0 ){
+parEBEN.Gaussian <-  function(BASIS, Target, lambda, alpha, Epis = "no", verbose = 0 ){
     N <- nrow(BASIS)
     K <- ncol(BASIS)
     if (verbose>0) cat("EBEN Gaussian Model, Epis: ",Epis,"\n")

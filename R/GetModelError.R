@@ -20,7 +20,8 @@ GetModelError <- function(x, y, lambda, alpha, Epis = "no", prior = "gaussian"){
     }
     #Compute MSE:
     temp <- y - (Mu0 + xTest%*%Mu)				
-    MeanSqErr[i] <- t(temp)%*%temp
+    MeanSqErr <- t(temp)%*%temp
+    return(MeanSqErr)
   }else{
     fit <- parEBEN.Binomial(x, y, lambda, alpha, Epis, verbose=0)
     M	<- length(fit$weight)/6
@@ -46,7 +47,7 @@ GetModelError <- function(x, y, lambda, alpha, Epis = "no", prior = "gaussian"){
       temp <- exp(Mu0 + xTest%*%Mu)
       if(max(temp)>1e10) temp[which(temp>1e10)] <- 1e5
       if(min(temp)<1e-10) temp[which(temp<1e-10)] <- 1e-5
-      logL[i] <- mean(y*log(temp/(1+temp)) + (1-y)*log(1/(1+temp)))
+      logL <- mean(y*log(temp/(1+temp)) + (1-y)*log(1/(1+temp)))
       }
   return(logL)
     }
