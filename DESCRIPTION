@@ -17,6 +17,12 @@ Imports:
 	foreach (>= 1.4.3)
 Suggests:
 	RevoScaleR
-Collate: 
+Collate:
+	'BuildGrid.R'
+	'GetModelError.R'
+	'parEBEN.Binomial.R'
+	'parEBEN.cv.caret.R'
+	'parEBEN.cv.doMPI.R'
+	'parEBEN.Gaussian.R'
     'parEBEN.cv.R'
     'parEBEN.cv.doParallel.R'
