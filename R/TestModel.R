@@ -13,14 +13,14 @@ TestModel <- function(BASIS, Target, lambda, alpha, nFolds, foldId = 0, Epis = "
     
     if(prior == "gaussian"){
       fit <- parEBEN.Gaussian(Basis.Train, Target.Train, lambda, alpha, Epis)
-      FoldError <- GetFoldError(fit,prior)
+      FoldError <- GetFoldError(Basis.Train, Target.Train, fit, prior)
       out <- data.frame(foldId = i,
                         alpha = alpha,
                         lambda = lambda,
                         MSE = FoldError)
     }else{
       fit <- parEBEN.Binomial(Basis.Train, Target.Train, lambda, alpha, Epis)
-      FoldError <- GetFoldError(fit,prior)
+      FoldError <- GetFoldError(Basis.Train, Target.Train, fit, prior)
       out <- data.frame(foldId = i,
                         alpha = alpha,
                         lambda = lambda,

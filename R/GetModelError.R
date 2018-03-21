@@ -6,15 +6,15 @@ GetFoldError <- function(BASIS, Target, fit, prior = "gaussian"){
     Mu0 <- fit$Intercept[1]
     if(is.na(Mu0)){break}
     
-    ntest <- nrow(Basis)
+    ntest <- nrow(BASIS)
     basisTest <- matrix(rep(0,ntest*M),ntest,M)
     
     for(i_basis in 1:M){
       loc1 <- Betas[i_basis,1]
       loc2 <- Betas[i_basis,2]
       if(loc1 !=0){
-        if(loc1==loc2){basisTest[,i_basis] <- Basis[,loc1]}
-        else{basisTest[,i_basis] <- Basis[,loc1] * Basis[,loc2]}
+        if(loc1==loc2){basisTest[,i_basis] <- BASIS[,loc1]}
+        else{basisTest[,i_basis] <- BASIS[,loc1] * BASIS[,loc2]}
       }else{
         basisTest<- rep(0,length(Target))
       }						
@@ -31,7 +31,7 @@ GetFoldError <- function(BASIS, Target, fit, prior = "gaussian"){
     Mu0 <- fit$Intercept[1]
     
     rm(list="fit")
-    ntest <- nrow(Basis)
+    ntest <- nrow(BASIS)
     #M <- nrow(Betas)
     if(M==1 && Betas[1,1]== 0){
       logL <- 0
@@ -40,8 +40,8 @@ GetFoldError <- function(BASIS, Target, fit, prior = "gaussian"){
       for(i_basis in 1:M){
         loc1 <- Betas[i_basis,1]
         loc2 <- Betas[i_basis,2]
-        if(loc1==loc2){basisTest[,i_basis] <- Basis[,loc1]}
-        else{basisTest[,i_basis] <- Basis[,loc1] * Basis[,loc2]}
+        if(loc1==loc2){basisTest[,i_basis] <- BASIS[,loc1]}
+        else{basisTest[,i_basis] <- BASIS[,loc1] * BASIS[,loc2]}
       }
       temp <- exp(Mu0 + basisTest%*%Mu)
       if(max(temp) > 1e10) temp[which(temp>1e10)] <- 1e5
