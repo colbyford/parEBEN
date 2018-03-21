@@ -20,8 +20,11 @@ Imports:
 Suggests:
 	RevoScaleR
 Collate:
+	'AssignToFolds.R'
 	'BuildGrid.R'
+	'CrossValidate.R'
 	'GetModelError.R'
+	'TestModel.R'
 	'parEBEN.Binomial.R'
 	'parEBEN.cv.caret.R'
 	'parEBEN.cv.doMPI.R'
