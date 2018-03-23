@@ -8,7 +8,7 @@
 In the EBEN algorithm, the hyperparameters control the degree of shrinkage, and are obtained via cross-validation. This program calculates the optimal alpha and lambda values, which minimize the mean square error of the prediction.}
 
 \usage{
-parEBEN.cv(BASIS, Target, nFolds, Epis = "no", foldId = 0, parMethod = "doParallel", prior = "gaussian")
+CrossValidate(BASIS, Target, nFolds, foldId = 0, Epis = "no", prior = "gaussian")
 }
 
 \arguments{
@@ -55,7 +55,7 @@ k = 100
 BASIS = BASIS[1:n,1:k]
 y  = y[1:n]
 
-parEBENcv <- CrossValidate(BASIS, y, nFolds = 3, BASIS, Epis = "no", prior = "gaussian")
+parEBENcv <- CrossValidate(BASIS, y, nFolds = 3, Epis = "no", prior = "gaussian")
 
 #Use the optimal values in the EBEN model
 EBENoutput <- EBelasticNet.Gaussian(BASIS, y, lambda = parEBENcv$lambda.optimal, alpha = cv$alpha.optimal, Epis = "no", verbose = 1)
