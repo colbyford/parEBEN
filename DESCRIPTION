@@ -25,7 +25,6 @@ Collate:
 	'GetModelError.R'
 	'TestModel.R'
 	'parEBEN.Binomial.R'
-	'parEBEN.cv.caret.R'
 	'parEBEN.cv.doMPI.R'
 	'parEBEN.Gaussian.R'
     'parEBEN.cv.R'
