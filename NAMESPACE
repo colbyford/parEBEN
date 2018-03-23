@@ -1,6 +1,5 @@
 import(EBEN)
 import(doParallel)
-import(doMPI)
 import(foreach)
 import(dplyr)
 import(magrittr)
