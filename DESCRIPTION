@@ -24,8 +24,3 @@ Collate:
 	'CrossValidate.R'
 	'GetModelError.R'
 	'TestModel.R'
-	'parEBEN.Binomial.R'
-	'parEBEN.cv.doMPI.R'
-	'parEBEN.Gaussian.R'
-    'parEBEN.cv.R'
-    'parEBEN.cv.doParallel.R'
