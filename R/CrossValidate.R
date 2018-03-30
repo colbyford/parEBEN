@@ -2,41 +2,45 @@ CrossValidate <- function(BASIS, Target, nFolds, foldId = 0, Epis = "no", prior 
   ParameterGrid <- BuildGrid(BASIS, Target, nFolds, Epis)
   
   if(prior == "gaussian"){
-    MSE <- foreach (row = 1:nrow(ParameterGrid), .combine = rbind) %dopar% {
+    MSE_temp <- foreach (row = 1:nrow(ParameterGrid), .combine = rbind) %dopar% {
       alpha <- ParameterGrid$alpha[row]
       lambda <- ParameterGrid$lambda[row]
       TestModel(BASIS, Target, lambda, alpha, nFolds, foldId, Epis, prior = "gaussian")
       }
     
-    SSE <- MSE %>%
+    Error <- MSE_temp %>%
       group_by(alpha, lambda) %>% 
-      summarise(SSE = mean(MSE)/(sd(MSE)/sqrt(max(foldId))))
+      summarise(SE = sd(MSE)/sqrt(max(foldId)),
+                MSE = mean(MSE)
+                )
     
-    index <- which.min(SSE$SSE)
-    lambda.optimal <- SSE[index,]$lambda
-    alpha.optimal <- SSE[index,]$alpha
+    index <- which.min(Error$MSE)
+    lambda.optimal <- Error[index,]$lambda
+    alpha.optimal <- Error[index,]$alpha
     
-    out <- list(Results.Detail = MSE,
-                Results.ByFold = SSE,
+    out <- list(Results.Detail = MSE_temp,
+                Results.Summary = Error,
                 lambda.optimal = lambda.optimal,
                 alpha.optimal = alpha.optimal)
     
   }else{
-    logL <- foreach (row = 1:nrow(ParameterGrid), .combine = rbind) %dopar% {
+    logL_temp <- foreach (row = 1:nrow(ParameterGrid), .combine = rbind) %dopar% {
       alpha <- ParameterGrid$alpha[row]
       lambda <- ParameterGrid$lambda[row]
       TestModel(BASIS, Target, lambda, alpha, nFolds, foldId, Epis, prior = "binomial")
     }
-    SSE <- logL %>% 
+    Error <- logL_temp %>% 
       group_by(alpha, lambda) %>% 
-      summarise(SSE = mean(logL)/(sd(logL)/sqrt(max(foldId))))
+      summarise(SE = sd(logL)/sqrt(max(foldId)),
+                Likelihood = -mean(logL)
+                )
     
-    index <- which.min(SSE$SSE)
-    lambda.optimal <- SSE[index,]$lambda
-    alpha.optimal <- SSE[index,]$alpha
+    index <- which.min(Error$MSE)
+    lambda.optimal <- Error[index,]$lambda
+    alpha.optimal <- Error[index,]$alpha
     
-    out <- list(Results.Detail = logL,
-                Results.ByFold = SSE,
+    out <- list(Results.Detail = logL_temp,
+                Results.Summary = Error,
                 lambda.optimal = lambda.optimal,
                 alpha.optimal = alpha.optimal)
   }

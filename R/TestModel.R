@@ -1,5 +1,5 @@
 TestModel <- function(BASIS, Target, lambda, alpha, nFolds, foldId = 0, Epis = "no", prior = "gaussian"){
-  out <- foreach (i = 1:nFolds, .combine = rbind, .packages = c("parEBEN","EBEN")) %dopar% {
+  out <- foreach (i = 1:nFolds, .combine = rbind, .packages = c("EBEN")) %dopar% {
     #cat("Testing Fold", j, "\n")
     foldId <- AssignToFolds(BASIS, nFolds)
     
@@ -14,7 +14,7 @@ TestModel <- function(BASIS, Target, lambda, alpha, nFolds, foldId = 0, Epis = "
     if(prior == "gaussian"){
       fit <- EBEN::EBelasticNet.Gaussian(Basis.Train, Target.Train, lambda, alpha, Epis)
 	  #fit <- parEBEN.Gaussian(Basis.Train, Target.Train, lambda, alpha, Epis)
-      FoldError <- GetFoldError(Basis.Train, Target.Train, fit, prior)
+      FoldError <- GetFoldError(Basis.Test, Target.Test, fit, prior = "gaussian")
       out <- data.frame(foldId = i,
                         alpha = alpha,
                         lambda = lambda,
@@ -22,7 +22,7 @@ TestModel <- function(BASIS, Target, lambda, alpha, nFolds, foldId = 0, Epis = "
     }else{
       fit <- EBEN::EBelasticNet.Binomial(Basis.Train, Target.Train, lambda, alpha, Epis)
 	  #fit <- parEBEN.Binomial(Basis.Train, Target.Train, lambda, alpha, Epis)
-      FoldError <- GetFoldError(Basis.Train, Target.Train, fit, prior)
+      FoldError <- GetFoldError(Basis.Test, Target.Test, fit, prior = "binomial")
       out <- data.frame(foldId = i,
                         alpha = alpha,
                         lambda = lambda,
