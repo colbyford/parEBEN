@@ -17,6 +17,7 @@ Imports:
 	magrittr (>= 1.0.0),
 	dplyr (>= 0.4.0)
 Suggests:
+	doMPI,
 	RevoScaleR
 Collate:
 	'AssignToFolds.R'
