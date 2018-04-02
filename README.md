@@ -24,6 +24,48 @@ install_github("colbyford/parEBEN")
 library(parEBEN)
 ```
 
+## Usage
+First, select the parallelization method you wish to use. Currently, all *foreach*-related methods are supported such as *doParallel*, *doMPI*, and *doSNOW*.
+### Initialize The Cluster
+Note: Refer to the manual for your desired paralleization package as the initialization may differ between methods.
+```r
+library(doParallel)
+no_cores <- detectCores()
+cl <- makeCluster(no_cores)
+#clusterExport(cl, c("CrossValidate"))
+registerDoParallel(cl)
+```
+
+### Begin the Cross-Validation
+```r
+## Load in data and required EBEN and parEBEN packages
+library(EBEN)
+library(parEBEN)
+
+## Create small sample matrix for testing
+data(BASIS)
+data(y)
+n = 50
+k = 100
+BASIS = BASIS[1:n,1:k]
+y  = y[1:n]
+
+parEBENcv <- CrossValidate(BASIS,
+                           y,
+                           nFolds = 3,
+                           Epis = "no",
+                           prior = "gaussian"
+                           )
+
+## Use the optimal values in the EBEN model
+EBENoutput <- EBelasticNet.Gaussian(BASIS,
+                                    y,
+                                    lambda = parEBENcv$lambda.optimal,
+                                    alpha = cv$alpha.optimal,
+                                    Epis = "no",
+                                    verbose = 1)
+```
+
 ## To Do List
 
 - [x] Binomial prior cross-validation script with doParallel.
