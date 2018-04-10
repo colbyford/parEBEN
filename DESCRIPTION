@@ -1,7 +1,7 @@
 Package: parEBEN
 Type: Package
 Title: Parallel Implementations of the Empirical Bayesian Elastic Net Cross-Validation
-Version: 0.9.0
+Version: 0.9.5
 Date: 2018-01-16
 Author: Colby Ford
 Maintainer: Colby Ford <cford38@uncc.edu>
@@ -23,5 +23,6 @@ Collate:
 	'AssignToFolds.R'
 	'BuildGrid.R'
 	'CrossValidate.R'
+	'LocalSearch.R'
 	'GetModelError.R'
 	'TestModel.R'

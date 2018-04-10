@@ -8,7 +8,7 @@
 In the EBEN algorithm, the hyperparameters control the degree of shrinkage, and are obtained via cross-validation. This program calculates the optimal alpha and lambda values, which minimize the mean square error of the prediction.}
 
 \usage{
-CrossValidate(BASIS, Target, nFolds, foldId = 0, Epis = "no", prior = "gaussian")
+CrossValidate(BASIS, Target, nFolds, foldId = 0, Epis = "no", prior = "gaussian", search = "global")
 }
 
 \arguments{
@@ -18,10 +18,13 @@ CrossValidate(BASIS, Target, nFolds, foldId = 0, Epis = "no", prior = "gaussian"
   \item{Epis}{Epistasis - "yes" or "no" for including two-way interactions}
   \item{foldId}{Randomly assign samples to different folds}
   \item{prior}{Model prior - "binomial" or "gaussian"}
+  \item{search}{Search type - "global" or "local"}
 }
 
 \details{
-  If Epis="yes", the program adds two-way interaction K*(K-1)/2 more columns to BASIS
+  If Epis = "yes", the program adds two-way interaction K*(K-1)/2 more columns to BASIS
+  If search = "global", the program will search through all 400 combinations of alpha and lambda. Otherwise, the "local" search is performed using the logic from the original EBEN package, which skips certain iterations based on error changes.
+  The empirical Bayesian elastic net is fully parallelized when performing a "global" search, which may take longer than the serial EBEN package as more iterations may be computed. For the "local" search, only the cross-validation steps are parallelized whereas the hyperparameter sweeping is still serial.
 }
 
 \value{
@@ -55,7 +58,7 @@ k = 100
 BASIS = BASIS[1:n,1:k]
 y  = y[1:n]
 
-parEBENcv <- CrossValidate(BASIS, y, nFolds = 3, Epis = "no", prior = "gaussian")
+parEBENcv <- CrossValidate(BASIS, y, nFolds = 3, Epis = "no", prior = "gaussian", search = "global")
 
 #Use the optimal values in the EBEN model
 EBENoutput <- EBelasticNet.Gaussian(BASIS, y, lambda = parEBENcv$lambda.optimal, alpha = cv$alpha.optimal, Epis = "no", verbose = 1)

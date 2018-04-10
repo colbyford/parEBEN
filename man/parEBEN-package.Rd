@@ -14,7 +14,7 @@ Currently, this package allows for the use of the "doParallel" and "doMPI" packa
 \tabular{ll}{
 Package: \tab parEBEN\cr
 Type: \tab Package\cr
-Version: \tab 0.9\cr
+Version: \tab 0.9.5\cr
 Date: \tab 2018-01-16\cr
 License: \tab Apache 2.0\cr
 }
