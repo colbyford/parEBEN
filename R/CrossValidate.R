@@ -49,7 +49,7 @@ CrossValidate <- function(BASIS, Target, nFolds, foldId = 0, Epis = "no", prior 
     return(out)
     
   }else{
-    out <- LocalSearch(BASIS, Target, nFolds, Epis = "no", foldId = 0, prior = "gaussian")
+    out <- LocalSearch(BASIS, Target, nFolds, Epis, foldId, prior)
     
     return(out)
   }
