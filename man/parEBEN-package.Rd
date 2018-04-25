@@ -7,7 +7,7 @@
 \description{
 The parEBEN package provides parallelized cross-validation functionality to the Empirical Bayesian Elastic Net (EBEN) package for handling multicollinearity in generalized linear regression models. By distributing the processing load of the alpha and lambda hyperparameter search across multiple cores of a processor (or multiple machines in a computing cluster), there is a significant reduction in processing time without negatively affecting the output of the EBEN algorithm.
 
-Currently, this package allows for the use of the "doParallel" and "doMPI" packages, which can parallelize over cores of a single processor or between a series of machines. However, future enhancements will include support for other parallel packages for Hadoop and Spark and possibly GPU-based processing.
+Currently, this package allows for the use of the "doParallel", "doSNOW", and "doMPI" packages, which can parallelize over cores of a single processor or between a series of machines. However, future enhancements will include support for other parallel packages for Hadoop and Spark and possibly GPU-based processing.
 
 }
 \details{
@@ -15,7 +15,7 @@ Currently, this package allows for the use of the "doParallel" and "doMPI" packa
 Package: \tab parEBEN\cr
 Type: \tab Package\cr
 Version: \tab 0.9.5\cr
-Date: \tab 2018-01-16\cr
+Date: \tab 2018-04-25\cr
 License: \tab Apache 2.0\cr
 }
 
