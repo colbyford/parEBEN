@@ -22,9 +22,8 @@ CrossValidate(BASIS, Target, nFolds, foldId = 0, Epis = "no", prior = "gaussian"
 }
 
 \details{
-  If Epis = "yes", the program adds two-way interaction K*(K-1)/2 more columns to BASIS
-  If search = "global", the program will search through all 400 combinations of alpha and lambda. Otherwise, the "local" search is performed using the logic from the original EBEN package, which skips certain iterations based on error changes.
-  The empirical Bayesian elastic net is fully parallelized when performing a "global" search, which may take longer than the serial EBEN package as more iterations may be computed. For the "local" search, only the cross-validation steps are parallelized whereas the hyperparameter sweeping is still serial.
+  \item{1}{If Epis = "yes", the program adds two-way interaction K*(K-1)/2 more columns to BASIS}
+  \item{2}{If search = "global", the program will search through all 400 combinations of alpha and lambda. Otherwise, the "local" search is performed using the logic from the original EBEN package, which skips certain iterations based on error changes. The empirical Bayesian elastic net is fully parallelized when performing a "global" search, which may take longer than the serial EBEN package as more iterations may be computed. For the "local" search, only the cross-validation steps are parallelized whereas the hyperparameter sweeping is still serial.}
 }
 
 \value{
