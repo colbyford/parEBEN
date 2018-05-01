@@ -27,7 +27,7 @@ library(parEBEN)
 ## Usage
 First, select the parallelization method you wish to use. Currently, all *foreach*-related methods are supported such as *doParallel*, *doMPI*, and *doSNOW*.
 ### Initialize The Cluster
-Note: Refer to the manual for your desired paralleization package as the initialization may differ between methods.
+Note: Refer to the manual for your desired *foreach* parallelization package as the initialization may differ between methods.
 ```r
 library(doParallel)
 no_cores <- detectCores()
