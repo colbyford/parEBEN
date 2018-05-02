@@ -1,5 +1,5 @@
 TestModel <- function(BASIS, Target, lambda, alpha, nFolds, foldId = 0, Epis = "no", prior = "gaussian"){
-  out <- foreach (i = 1:nFolds, .combine = rbind, .packages = c("EBEN")) %dopar% {
+  out <- foreach (i = 1:nFolds, .combine = rbind, .packages = c("EBEN", "parEBEN")) %dopar% {
     #cat("Testing Fold", j, "\n")
     foldId <- AssignToFolds(BASIS, nFolds)
     
