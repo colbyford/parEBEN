@@ -15,7 +15,7 @@ Currently, this package allows for the use of the "doParallel", "doSNOW", and "d
 Package: \tab parEBEN\cr
 Type: \tab Package\cr
 Version: \tab 0.9.5\cr
-Date: \tab 2018-04-25\cr
+Date: \tab 2018-05-01\cr
 License: \tab Apache 2.0\cr
 }
 
@@ -30,7 +30,8 @@ Key Algorithms \cr
 .	Huang, A., Xu, S., and Cai, X. (2014). Empirical Bayesian elastic net for multiple quantitative trait locus mapping. Heredity 10.1038/hdy.2014.79 \cr\cr
 Other Publications: \cr
 .	Huang, A., E. Martin, et al. (2014). "Detecting genetic interactions in pathway-based genome-wide association studies." Genet Epidemiol 38(4): 300-309.\cr
-Huang, A., S. Xu, et al. (2014). "Whole-genome quantitative trait locus mapping reveals major role of epistasis on yield of rice." PLoS ONE 9(1): e87330.\cr
-.	Huang, A. (2014). "Sparse model learning for inferring genotype and phenotype associations." Ph.D Dissertation. University of Miami(1186).
+.	Huang, A., S. Xu, et al. (2014). "Whole-genome quantitative trait locus mapping reveals major role of epistasis on yield of rice." PLoS ONE 9(1): e87330.\cr
+.	Huang, A. (2014). "Sparse model learning for inferring genotype and phenotype associations." Ph.D Dissertation. University of Miami(1186).\cr
+.	Wen, J., Ford, C., Janies, D., Shi, X. (2018). "New strategies toward scaling up epistasis analysis on large-scale genomic datasets" ACM Conference on Bioinformatics, Computational Biology, and Health Informatics.
 }
 \keyword{ package }
