@@ -28,12 +28,23 @@ library(parEBEN)
 First, select the parallelization method you wish to use. Currently, all *foreach*-related methods are supported such as *doParallel*, *doMPI*, and *doSNOW*.
 ### Initialize The Cluster
 Note: Refer to the manual for your desired *foreach* parallelization package as the initialization may differ between methods.
+##### Local Parallel
 ```r
 library(doParallel)
 no_cores <- detectCores()
 cl <- makeCluster(no_cores)
 #clusterExport(cl, c("CrossValidate"))
 registerDoParallel(cl)
+```
+##### Cluster Distribution
+```r
+library(doMPI)
+# create and register a doMPI cluster if necessary
+if (!identical(getDoParName(), 'doMPI')) {
+  # set count to (cores_requested-1)
+  cl <- startMPIcluster(count=255,verbose=TRUE)
+  registerDoMPI(cl)
+}
 ```
 
 ### Begin the Cross-Validation
