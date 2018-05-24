@@ -47,6 +47,13 @@ if (!identical(getDoParName(), 'doMPI')) {
 }
 ```
 
+##### Microsoft Machine Learning Server Distribution
+```
+# Set your compute contaxt as Spark, local parallel, MapReduce, etc.
+library(doRSR)
+registerDoRSR()
+```
+
 ### Begin the Cross-Validation
 ```r
 ## Load in data and required EBEN and parEBEN packages
@@ -84,8 +91,8 @@ EBENoutput <- EBelasticNet.Gaussian(BASIS,
 - [x] Gaussian prior cross-validation script with doParallel.
 - [x] Binomial prior cross-validation script with doMPI.
 - [x] Gaussian prior cross-validation script with doMPI.
-- [ ] Binomial prior cross-validation script with Microsoft ML Server (RevoScaleR).
-- [ ] Gaussian prior cross-validation script with Microsoft ML Server (RevoScaleR).
+- [x] Binomial prior cross-validation script with Microsoft ML Server (RevoScaleR/doRSR).
+- [x] Gaussian prior cross-validation script with Microsoft ML Server (RevoScaleR/doRSR).
 - [ ] Binomial prior cross-validation script with SparkR.
 - [ ] Gaussian prior cross-validation script with SparkR.
 - [ ] Binomial prior cross-validation script with CUDA.
