@@ -49,12 +49,14 @@ if (!identical(getDoParName(), 'doMPI')) {
 
 ##### Microsoft Machine Learning Server Distribution
 ```
-# Set your compute contaxt as Spark, local parallel, MapReduce, etc.
-## See: https://docs.microsoft.com/en-us/machine-learning-server/r-reference/revoscaler/rxspark
+## Set your compute contaxt as Spark, local parallel, MapReduce, etc.
+### See: https://docs.microsoft.com/en-us/machine-learning-server/r-reference/revoscaler/rxspark
+### Sample Code: https://gist.github.com/premalxyz/e97ae7823052b7a426cb816830c0188c#file-spark_compute_context-r
+
 mySparkCluster <- RxSpark(ClusterInfo)
 rxSetComputeContext(mySparkCluster)
 
-# Register the context using doRSR
+## Register the context using doRSR
 library(doRSR)
 registerDoRSR()
 ```
