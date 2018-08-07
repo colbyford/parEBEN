@@ -26,3 +26,4 @@ Collate:
 	'LocalSearch.R'
 	'GetModelError.R'
 	'TestModel.R'
+RoxygenNote: 6.0.1
