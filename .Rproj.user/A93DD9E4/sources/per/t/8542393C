@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1533997699765.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3678638692",
+    "id" : "8542393C",
+    "lastKnownWriteTime" : 1533996505,
+    "last_content_update" : 1533996505,
+    "path" : "~/Documents/parEBEN/man/CrossValidate.Rd",
+    "project_path" : "man/CrossValidate.Rd",
+    "properties" : {
+        "cursorPosition" : "68,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_doc"
+}

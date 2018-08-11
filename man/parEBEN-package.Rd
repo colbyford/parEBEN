@@ -14,14 +14,14 @@ Currently, this package allows for the use of the "doParallel", "doSNOW", and "d
 \tabular{ll}{
 Package: \tab parEBEN\cr
 Type: \tab Package\cr
-Version: \tab 0.9.5\cr
-Date: \tab 2018-05-01\cr
+Version: \tab 0.9.6\cr
+Date: \tab 2018-08-11\cr
 License: \tab Apache 2.0\cr
 }
 
 }
 
-\author{Colby Ford - Dept. of Bioinformatics and Genomics, The University of North Carolina at Charlotte}
+\author{Colby T. Ford, Ph.D. - Dept. of Bioinformatics and Genomics, The University of North Carolina at Charlotte}
 
 \references{
 Key Algorithms \cr
