@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1534012966843.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A9A4CE27",
+    "lastKnownWriteTime" : 1534013005,
+    "last_content_update" : 1534013005342,
+    "path" : "~/Documents/parEBEN/R/TestModel.R",
+    "project_path" : "R/TestModel.R",
+    "properties" : {
+        "cursorPosition" : "3,29",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

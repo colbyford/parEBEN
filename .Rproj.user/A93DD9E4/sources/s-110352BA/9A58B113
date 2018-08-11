@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1534012907139.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9A58B113",
+    "lastKnownWriteTime" : 1534012928,
+    "last_content_update" : 1534012928312,
+    "path" : "~/Documents/parEBEN/R/GetModelError.R",
+    "project_path" : "R/GetModelError.R",
+    "properties" : {
+        "cursorPosition" : "2,23",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

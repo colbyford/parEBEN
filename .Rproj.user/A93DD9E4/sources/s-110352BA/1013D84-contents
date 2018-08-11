@@ -1,0 +1,12 @@
+Package: parEBEN
+Type: Package
+Title: Parallel Implementations of the Empirical Bayesian Elastic Net Cross-Validation
+Version: 0.9.7
+Author: Colby Ford
+Maintainer: Colby Ford <colby.ford@uncc.edu>
+Description: Provides parallelized cross-validation functionality to the Empirical Bayesian Elastic Net (EBEN) package for handling multicollinearity in generalized linear regression models.
+URL: https://github.com/colbyford/parEBEN (site)
+License: Apache 2.0
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.0

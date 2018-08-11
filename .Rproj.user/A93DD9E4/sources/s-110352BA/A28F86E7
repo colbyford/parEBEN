@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1534012876543.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A28F86E7",
+    "lastKnownWriteTime" : 1534012905,
+    "last_content_update" : 1534012905419,
+    "path" : "~/Documents/parEBEN/R/BuildGrid.R",
+    "project_path" : "R/BuildGrid.R",
+    "properties" : {
+        "cursorPosition" : "3,20",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

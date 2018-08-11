@@ -1,15 +1,20 @@
+#' @title Get Error Metrics by Fold
+#'
+#' @export GetFoldError
+#############################
+
 GetFoldError <- function(Basis.Test, Target.Test, fit, prior = "gaussian"){
   if(prior == "gaussian"){
     M	<- length(fit$weight)/6
     Betas <- matrix(fit$weight, nrow = M, ncol = 6, byrow = FALSE)
     Mu <- Betas[,3]
     Mu0 <- fit$Intercept[1]
-    
+
     if(is.na(Mu0)){break}
-    
+
     ntest <- nrow(Basis.Test)
     basisTest <- matrix(rep(0, ntest*M), ntest, M)
-    
+
     for(i_basis in 1:M){
       loc1 <- Betas[i_basis,1]
       loc2 <- Betas[i_basis,2]
@@ -18,11 +23,11 @@ GetFoldError <- function(Basis.Test, Target.Test, fit, prior = "gaussian"){
         else{basisTest[,i_basis] <- Basis.Test[,loc1] * Basis.Test[,loc2]}
       }else{
         basisTest<- rep(0,length(Target.Test))
-      }						
+      }
     }
-    
+
     #compute mean square error:
-    temp <- Target.Test - (Mu0 + basisTest%*%Mu)				
+    temp <- Target.Test - (Mu0 + basisTest%*%Mu)
     MeanSqErr <- t(temp)%*%temp
     return(MeanSqErr)
   }else{
@@ -30,7 +35,7 @@ GetFoldError <- function(Basis.Test, Target.Test, fit, prior = "gaussian"){
     Betas <- matrix(fit$weight, nrow = M, ncol = 6, byrow = FALSE)
     Mu <- Betas[,3]
     Mu0 <- fit$Intercept[1]
-    
+
     rm(list="fit")
     ntest <- nrow(Basis.Test)
     #M <- nrow(Betas)

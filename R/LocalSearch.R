@@ -1,3 +1,8 @@
+#' @title Perform Local Hyperparameter Search
+#'
+#' @export LocalSearch
+#############################
+
 LocalSearch <- function(BASIS, Target, nFolds, Epis = "no", foldId = 0, prior = "gaussian"){
   if(prior == "gaussian"){
     #early stop: for each alpha, if next lambda > SSEmin, then stop.
@@ -21,7 +26,7 @@ LocalSearch <- function(BASIS, Target, nFolds, Epis = "no", foldId = 0, prior = 
       basis <- basis/sqrt(sum(basis*basis))
       corBy <- basis%*%response
       if(corBy>lambda_Max){lambda_Max = corBy}
-    }	
+    }
     if(Epis == "yes"){
       for(i_b in 1:(K-1)){
         for(i_bj in (i_b + 1):K){
@@ -30,35 +35,35 @@ LocalSearch <- function(BASIS, Target, nFolds, Epis = "no", foldId = 0, prior = 
           corBy <- basis%*%(Target-mean(Target))
           if(corBy>lambda_Max){lambda_Max <- corBy}
         }
-      }		
+      }
     }
     lambda_Max <- lambda_Max*10
     lambda_Min <- log(0.001*lambda_Max)
     step <- (log(lambda_Max) - lambda_Min)/19
     Lambda <- exp(seq(from = log(lambda_Max),to=lambda_Min,by= -step))
     N_step <- length(Lambda)
-    
+
     step <- 1
     Alpha <- seq(from = 1, to = 0.05, by = -0.05)
     #Alpha <- 0.05
     nAlpha <- length(Alpha)
-    
+
     MSEcv <- mat.or.vec((N_step*nAlpha), 4)
     MSEeachAlpha <- mat.or.vec(nAlpha, 4) # minimum MSE for each alpha
     MeanSqErr <- mat.or.vec(nFolds, 1)
     SSE1Alpha <- matrix(1e10, N_step, 2)# temp matrix to keep MSE + std in each step
-    
+
     for(i_alpha in 1:nAlpha){
       alpha <- Alpha[i_alpha]
       SSE1Alpha <- matrix(1e10, N_step, 2)# temp matrix to keep MSE + std in each step
-      
+
       cat("Testing alpha", i_alpha, "/",nAlpha,":\t\talpha: ",alpha,"\n")
-      for (i_s in 1:N_step){			
+      for (i_s in 1:N_step){
         lambda <- Lambda[i_s]
         min_index <- which.min(SSE1Alpha[1:(i_s -1),1])
         previousL <- SSE1Alpha[min_index,1] + SSE1Alpha[min_index,2]
         cat("\tTesting step", step, "\t\tlambda: ",lambda,"\t")
-        
+
         MeanSqErr <- foreach(i = 1:nFolds, .combine = rbind, .packages = c("EBEN","parEBEN")) %dopar% {
           #cat("Testing fold", j, "\n")
           index <- which(foldId!=i)
@@ -72,7 +77,7 @@ LocalSearch <- function(BASIS, Target, nFolds, Epis = "no", foldId = 0, prior = 
           Betas <- matrix(fit$weight, nrow = M, ncol = 6, byrow= FALSE)
           Mu <- Betas[,3]
           Mu0 <- fit$Intercept[1]
-          
+
           if(is.na(Mu0)){break}
           #rm(list="fit")
           ntest <- nrow(Basis.Test)
@@ -89,17 +94,17 @@ LocalSearch <- function(BASIS, Target, nFolds, Epis = "no", foldId = 0, prior = 
                   }
             }else{
               basisTest <- rep(0, length(Target.Test))
-            }						
+            }
           }
           #compute mean square error:
-          temp <- Target.Test - (Mu0 + basisTest%*%Mu)				
+          temp <- Target.Test - (Mu0 + basisTest%*%Mu)
           #MeanSqErr[i] <- t(temp)%*%temp
           MeanSqErr <- t(temp)%*%temp
           return(MeanSqErr)
         }
         #MeanSqErr
         #Mu0
-        
+
         SSE1Alpha[i_s,] <- c(mean(MeanSqErr), sd(MeanSqErr)/sqrt(nFolds))
         cat("SSE:",mean(MeanSqErr),"\n")
         MSEcv[step,] <- c(alpha, lambda, mean(MeanSqErr), sd(MeanSqErr)/sqrt(nFolds))
@@ -117,7 +122,7 @@ LocalSearch <- function(BASIS, Target, nFolds, Epis = "no", foldId = 0, prior = 
     Res.alpha <- MSEeachAlpha[index,1]
     result <- list(MSEeachAlpha,Res.alpha,Res.lambda,MSEcv)
     names(result) <- c("CrossValidation","alpha.optimal","lambda.optimal","fullCV")
-    
+
   }else{
     print("For the binomial prior, please use the global search.")
   }

@@ -1,3 +1,8 @@
+#' @title Assign Data to Folds
+#'
+#' @export AssignToFolds
+#############################
+
 AssignToFolds <- function(BASIS, nFolds = 0, foldId = 0){
   N <- nrow(BASIS)
   K <- ncol(BASIS)
