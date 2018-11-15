@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1542321886346.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1416499843",
+    "id" : "854C95B2",
+    "lastKnownWriteTime" : 1534164894,
+    "last_content_update" : 1534164894,
+    "path" : "C:/Users/Colby Ford/Desktop/parEBEN/R/BuildGrid.R",
+    "project_path" : "R/BuildGrid.R",
+    "properties" : {
+        "cursorPosition" : "50,27",
+        "scrollLine" : "18"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

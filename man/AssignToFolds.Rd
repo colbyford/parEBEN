@@ -6,6 +6,3 @@
 \usage{
 AssignToFolds(BASIS, nFolds = 0, foldId = 0)
 }
-\description{
-Assign Data to Folds
-}

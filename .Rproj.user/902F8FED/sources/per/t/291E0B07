@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1541007106413.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4074474195",
+    "id" : "291E0B07",
+    "lastKnownWriteTime" : 1534164894,
+    "last_content_update" : 1534164894,
+    "path" : "C:/Users/Colby Ford/Desktop/parEBEN/R/GetModelError.R",
+    "project_path" : "R/GetModelError.R",
+    "properties" : {
+        "cursorPosition" : "14,14",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

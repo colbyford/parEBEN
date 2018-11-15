@@ -63,7 +63,7 @@ CrossValidate <- function(BASIS, Target, nFolds, foldId = 0, Epis = "no", prior 
     ParameterGrid <- BuildGrid(BASIS, Target, nFolds, Epis)
 
     if(prior == "gaussian"){
-      MSE_temp <- foreach (row = 1:nrow(ParameterGrid), .combine = rbind, .packages = "parEBEN") %dopar% {
+      MSE_temp <- foreach (row = 1:nrow(ParameterGrid), .combine = rbind, .packages = "parEBEN", .verbose = TRUE) %dopar% {
         alpha <- ParameterGrid$alpha[row]
         lambda <- ParameterGrid$lambda[row]
         TestModel(BASIS, Target, lambda, alpha, nFolds, foldId, Epis, prior = "gaussian")
@@ -85,7 +85,7 @@ CrossValidate <- function(BASIS, Target, nFolds, foldId = 0, Epis = "no", prior 
                   alpha.optimal = alpha.optimal)
 
     }else{
-      logL_temp <- foreach (row = 1:nrow(ParameterGrid), .combine = rbind, .package = "parEBEN") %dopar% {
+      logL_temp <- foreach (row = 1:nrow(ParameterGrid), .combine = rbind, .package = "parEBEN", .verbose = FALSE) %dopar% {
         alpha <- ParameterGrid$alpha[row]
         lambda <- ParameterGrid$lambda[row]
         TestModel(BASIS, Target, lambda, alpha, nFolds, foldId, Epis, prior = "binomial")

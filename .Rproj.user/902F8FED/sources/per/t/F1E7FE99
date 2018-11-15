@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1542321812581.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "436226343",
+    "id" : "F1E7FE99",
+    "lastKnownWriteTime" : 1542321833,
+    "last_content_update" : 1542321833136,
+    "path" : "C:/Users/Colby Ford/Desktop/parEBEN/R/LocalSearch.R",
+    "project_path" : "R/LocalSearch.R",
+    "properties" : {
+        "cursorPosition" : "66,109",
+        "scrollLine" : "56"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

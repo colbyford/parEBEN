@@ -4,9 +4,6 @@
 \alias{TestModel}
 \title{Test Each Model Using Hyperparameter Combinations}
 \usage{
-TestModel(BASIS, Target, lambda, alpha, nFolds, foldId = 0,
-  Epis = "no", prior = "gaussian")
-}
-\description{
-Test Each Model Using Hyperparameter Combinations
+TestModel(BASIS, Target, lambda, alpha, nFolds, foldId = 0, Epis = "no",
+  prior = "gaussian")
 }
