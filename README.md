@@ -109,3 +109,7 @@ EBENoutput <- EBelasticNet.Gaussian(BASIS,
 ## License
 
 This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details
+
+## Funding
+
+This project was funded in part by [NIH R15HG009565](https://taggs.hhs.gov/Detail/AwardDetail?arg_AwardNum=R15HG009565&arg_ProgOfficeCode=55).
