@@ -64,7 +64,7 @@ LocalSearch <- function(BASIS, Target, nFolds, Epis = "no", foldId = 0, prior = 
         previousL <- SSE1Alpha[min_index,1] + SSE1Alpha[min_index,2]
         cat("\tTesting step", step, "\t\tlambda: ",lambda,"\t")
 
-        MeanSqErr <- foreach(i = 1:nFolds, .combine = rbind, .packages = c("EBEN","parEBEN"), .verbose = TRUE) %dopar% {
+        MeanSqErr <- foreach(i = 1:nFolds, .combine = rbind, .packages = c("EBEN","parEBEN")) %dopar% {
           #cat("Testing fold", j, "\n")
           index <- which(foldId!=i)
           Basis.Train <- BASIS[index,]

@@ -14,8 +14,8 @@ Currently, this package allows for the use of the "doParallel", "doSNOW", and "d
 \tabular{ll}{
 Package: \tab parEBEN\cr
 Type: \tab Package\cr
-Version: \tab 0.9.8\cr
-Date: \tab 2018-11-15\cr
+Version: \tab 0.9.9\cr
+Date: \tab 2018-11-28\cr
 License: \tab Apache 2.0\cr
 }
 

@@ -13,7 +13,7 @@
     "project_path" : "R/BuildGrid.R",
     "properties" : {
         "cursorPosition" : "50,27",
-        "scrollLine" : "18"
+        "scrollLine" : "0"
     },
     "relative_order" : 5,
     "source_on_save" : false,

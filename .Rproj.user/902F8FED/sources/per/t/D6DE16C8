@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3858276188",
+    "hash" : "30891908",
     "id" : "D6DE16C8",
-    "lastKnownWriteTime" : 1542321807,
-    "last_content_update" : 1542321807180,
+    "lastKnownWriteTime" : 1543427542,
+    "last_content_update" : 1543427542180,
     "path" : "C:/Users/Colby Ford/Desktop/parEBEN/R/CrossValidate.R",
     "project_path" : "R/CrossValidate.R",
     "properties" : {
-        "cursorPosition" : "87,108",
-        "scrollLine" : "80"
+        "cursorPosition" : "87,95",
+        "scrollLine" : "56"
     },
     "relative_order" : 1,
     "source_on_save" : false,
