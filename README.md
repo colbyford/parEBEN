@@ -88,7 +88,7 @@ parEBENcv <- CrossValidate(BASIS,
 EBENoutput <- EBelasticNet.Gaussian(BASIS,
                                     y,
                                     lambda = parEBENcv$lambda.optimal,
-                                    alpha = cv$alpha.optimal,
+                                    alpha = parEBENcv$alpha.optimal,
                                     Epis = "no",
                                     verbose = 1)
 ```
