@@ -107,11 +107,11 @@ EBENoutput <- EBelasticNet.Gaussian(BASIS,
 - [ ] Gaussian prior cross-validation script with CUDA.
 - [x] Manual File/Usage Instructions.
 
-## How To Cite
+## Publication and How To Cite
+Data and materials used in publication can be found [here](paper_materials).
 ```
-Coming Soon!
+Citation Coming Soon!
 ```
-
 
 ## License
 
