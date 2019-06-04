@@ -1,0 +1,3 @@
+This depository includes the real yeast data analysis. 
+1. SL_filter.R is the script that conducts the single-locus filtering step.
+2. Input the filtered genotype matrix and pheontype into the R script Subset_Test_Gaus.R to get the final result.
