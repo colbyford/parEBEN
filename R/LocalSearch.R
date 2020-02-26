@@ -1,6 +1,6 @@
 #' @title Perform Local Hyperparameter Search
 #'
-#' @export LocalSearch
+#'
 #############################
 
 LocalSearch <- function(BASIS, Target, nFolds, Epis = "no", foldId = 0, prior = "gaussian"){

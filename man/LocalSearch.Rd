@@ -4,6 +4,8 @@
 \alias{LocalSearch}
 \title{Perform Local Hyperparameter Search}
 \usage{
-LocalSearch(BASIS, Target, nFolds, Epis = "no", foldId = 0,
-  prior = "gaussian")
+LocalSearch(BASIS, Target, nFolds, Epis = "no", foldId = 0, prior = "gaussian")
+}
+\description{
+Perform Local Hyperparameter Search
 }

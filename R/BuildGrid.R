@@ -1,7 +1,5 @@
 #' @title Build Hyperparameter Grid
 #'
-#' @export GetLambdaMax
-#' @export BuildGrid
 #############################
 
 GetLambdaMax <- function (BASIS, Target, Epis = "no"){

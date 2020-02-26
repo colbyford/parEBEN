@@ -1,0 +1,36 @@
+#' @title Parallel Implementations of the Empirical Bayesian Elastic Net Cross-Validation
+#'
+#' @description The parEBEN package provides parallelized cross-validation functionality to the Empirical Bayesian Elastic Net (EBEN) package for handling multicollinearity in generalized linear regression models. By distributing the processing load of the alpha and lambda hyperparameter search across multiple cores of a processor (or multiple machines in a computing cluster), there is a significant reduction in processing time without negatively affecting the output of the EBEN algorithm.
+#' Currently, this package allows for the use of the "foreach" set of packages (e.g "doParallel"), which can parallelize over cores of a single processor or between a series of machines. However, future enhancements will include support for other parallel packages for Hadoop and Spark and possibly GPU-based processing.
+#'
+#'
+#' @docType package
+#' @name parEBEN-package
+#' @aliases parEBEN parEBEN-package
+#'
+#' @import EBEN
+#' @import dplyr
+#' @import foreach
+#' @import magrittr
+#' @keywords genomics epistasis regularization multicollinearity bayesian-inference bioinformatics
+#' @author Colby T. Ford, \email{colby.ford@@uncc.edu} \url{https://orcid.org/0000-0002-7859-3622}
+#' @author Jia Wen, \email{jia_wen@@med.unc.edu} \url{https://orcid.org/0000-0003-3273-7704}
+#'
+#' @references
+#' \itemize{
+#' \item Key Algorithms
+#' \itemize{
+#' \item Cai, X., Huang, A., and Xu, S. (2011). Fast empirical Bayesian LASSO for multiple quantitative trait locus mapping. BMC Bioinformatics 12, 211.
+#' \item Huang A, Xu S, Cai X. (2013). Empirical Bayesian LASSO-logistic regression for multiple binary trait locus mapping. BMC genetics  14(1):5.
+#' \item Huang, A., Xu, S., and Cai, X. (2014). Empirical Bayesian elastic net for multiple quantitative trait locus mapping. Heredity 10.1038/hdy.2014.79
+#' }
+#' \item Other Publications:
+#' \itemize{
+#' \item Huang, A., E. Martin, et al. (2014). "Detecting genetic interactions in pathway-based genome-wide association studies." Genet Epidemiol 38(4): 300-309.
+#' \item Huang, A., S. Xu, et al. (2014). "Whole-genome quantitative trait locus mapping reveals major role of epistasis on yield of rice." PLoS ONE 9(1): e87330.
+#' \item Huang, A. (2014). "Sparse model learning for inferring genotype and phenotype associations." Ph.D Dissertation. University of Miami(1186).
+#' \item Wen, J., Ford, C., Janies, D., Shi, X. (2018). "New strategies toward scaling up epistasis analysis on large-scale genomic datasets" ACM Conference on Bioinformatics, Computational Biology, and Health Informatics.
+#' }
+#' }
+#' @seealso \url{https://github.com/colbyford/parEBEN}
+NULL

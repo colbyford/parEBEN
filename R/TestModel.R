@@ -1,6 +1,6 @@
 #' @title Test Each Model Using Hyperparameter Combinations
 #'
-#' @export TestModel
+#'
 #############################
 
 TestModel <- function(BASIS, Target, lambda, alpha, nFolds, foldId = 0, Epis = "no", prior = "gaussian"){
