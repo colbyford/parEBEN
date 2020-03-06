@@ -6,3 +6,6 @@
 \usage{
 GetFoldError(Basis.Test, Target.Test, fit, prior = "gaussian")
 }
+\description{
+Get Error Metrics by Fold
+}

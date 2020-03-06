@@ -1,6 +1,6 @@
 #' @title Get Error Metrics by Fold
 #'
-#' @export GetFoldError
+#'
 #############################
 
 GetFoldError <- function(Basis.Test, Target.Test, fit, prior = "gaussian"){

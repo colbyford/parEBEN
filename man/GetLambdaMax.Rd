@@ -6,3 +6,6 @@
 \usage{
 GetLambdaMax(BASIS, Target, Epis = "no")
 }
+\description{
+Build Hyperparameter Grid
+}
