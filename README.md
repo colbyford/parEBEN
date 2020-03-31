@@ -108,9 +108,26 @@ EBENoutput <- EBelasticNet.Gaussian(BASIS,
 - [x] Manual File/Usage Instructions.
 
 ## Publication and How To Cite
+Publication: [https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/btaa216/5813727](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/btaa216/5813727)
+
 Data and materials used in publication can be found [here](paper_materials).
 ```
-Citation Coming Soon!
+Jia Wen, Colby T Ford, Daniel Janies, Xinghua Shi, A Parallelized Strategy for Epistasis Analysis Based on Empirical Bayesian Elastic Net Models, Bioinformatics, , btaa216, https://doi.org/10.1093/bioinformatics/btaa216
+```
+or using BibTeX...
+```
+@article{10.1093/bioinformatics/btaa216,
+    author = {Wen, Jia and Ford, Colby T and Janies, Daniel and Shi, Xinghua},
+    title = "{A Parallelized Strategy for Epistasis Analysis Based on Empirical Bayesian Elastic Net Models}",
+    journal = {Bioinformatics},
+    year = {2020},
+    month = {03},
+    issn = {1367-4803},
+    doi = {10.1093/bioinformatics/btaa216},
+    url = {https://doi.org/10.1093/bioinformatics/btaa216},
+    note = {btaa216},
+    eprint = {https://academic.oup.com/bioinformatics/advance-article-pdf/doi/10.1093/bioinformatics/btaa216/32981158/btaa216.pdf},
+}
 ```
 
 ## License
