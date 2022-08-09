@@ -3,7 +3,8 @@
 
 <img align="right" src="https://raw.githubusercontent.com/colbyford/parEBEN/master/img/parEBEN_icon.png" alt="parEBEN icon" width="200">
 
-[![CRAN status](https://www.r-pkg.org/badges/version/parEBEN)](https://cran.r-project.org/package=parEBEN)
+<!-- [![CRAN status](https://www.r-pkg.org/badges/version/parEBEN)](https://cran.r-project.org/package=parEBEN)-->
+
 ## Abstract
 
 The Empirical Bayesian Elastic Net (EBEN) algorithm was developed by [Huang et al.](https://www.nature.com/articles/hdy201479) for handling multicollinearity in generalized linear regression models. Historically, this has been used in the analysis of quantitative trait loci (QTLs) and gene-gene interactions (epistasis). In addition to the algorithm, the group also created the [EBEN package for R](https://cran.r-project.org/package=EBEN). This package includes functions to generate the elastic nets for both binomial and gaussian priors. These functions are efficient and do not require large amounts of computational time. However, the package also includes functions for the cross-validation of those models. While essential, this step is a considerably more complex task. The cross-validation functions perform a sweep to determine hyperparameters and minimize prediction error. More specifically, an n-fold cross-validation sweep is performed to minimize error by trying combinations of two parameters (α and λ) in a stepped manner. Experimentally, it has been shown that this can take a rather extended amount of time, especially on larger datasets (as seen in genomics problems).
